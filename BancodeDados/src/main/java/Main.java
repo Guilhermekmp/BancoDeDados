@@ -14,5 +14,11 @@ public class Main {
     }catch (SQLException e){
       e.printStackTrace();
     }
+    
+    TestaMetodosArmaDao.testaInsert();
+   	TestaMetodosArmaDao.testaUpdate();
+   	TestaMetodosArmaDao.testaDelete();
+    TestaMetodosArmaDao.testaSelectTodos();
+    
   }
 }
