@@ -15,10 +15,10 @@ public class Main {
       e.printStackTrace();
     }
     
-   // TestaMetodosDao.testaInsert();
-   // TestaMetodosDao.testaDelete();
-   // TestaMetodosDao.testaUpdate();
-    TestaMetodosDao.testaSelectTodos();
+    TestaMetodosArmaDao.testaInsert();
+   	TestaMetodosArmaDao.testaUpdate();
+   	TestaMetodosArmaDao.testaDelete();
+    TestaMetodosArmaDao.testaSelectTodos();
     
   }
 }

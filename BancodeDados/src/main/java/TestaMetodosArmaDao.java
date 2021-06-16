@@ -2,7 +2,7 @@ import java.sql.SQLException;
 
 import java.util.List;
 
-public class TestaMetodosDao {
+public class TestaMetodosArmaDao {
 	
 	public static void testaDelete() {
 			Arma arma = new Arma();
