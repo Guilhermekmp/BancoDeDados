@@ -10,7 +10,7 @@ public class ConexaoBanco {
 
   private static final String USER = "postgres";
 
-  private static final String PASSWORD = "123";
+  private static final String PASSWORD = "postgres";
 
   public static Connection criarConexao() throws ClassNotFoundException, SQLException{
     Class.forName("org.postgresql.Driver");

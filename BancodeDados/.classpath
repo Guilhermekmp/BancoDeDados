@@ -23,6 +23,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
 	<classpathentry kind="lib" path="lombok.jar"/>
+>>>>>>> c03776d10e5dec5e164d21a1c1742f20968f011b
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
