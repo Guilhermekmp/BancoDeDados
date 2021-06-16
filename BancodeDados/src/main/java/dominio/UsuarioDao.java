@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class UsuarioDao {
@@ -19,7 +20,7 @@ public class UsuarioDao {
     }
 
     public void adicionarUsuario(Usuario usuario){
-        String sql = "INSERT INTO Usuario(id,nome,cpf,idade,email,telefone)";
+        String sql = "INSERT INTO Usuario(id,nome,cpf,dataNascimento,email,telefone) VALUES (?, ?, ?, ?, ?, ?);";
 
         try{
             PreparedStatement preparador = con.prepareStatement(sql);
@@ -28,10 +29,10 @@ public class UsuarioDao {
             preparador.setString(3, usuario.getCpf());
             preparador.setDate(4, new java.sql.Date( usuario.getdataNascimento().getTime()));
             preparador.setString(5, usuario.getEmail());
-            preparador.setString(5, usuario.getTelefone());
+            preparador.setString(6, usuario.getTelefone());
             preparador.execute();
             preparador.close();
-            System.out.println("Inserção realizada!");
+            System.out.println("Insercao realizada!");
         } catch (Exception e){
             System.out.println("ERRO - "+e.getMessage());
 
@@ -40,7 +41,7 @@ public class UsuarioDao {
     }
 
     public void updateUsuario(Usuario usuario) {
-        String sql = "UPDATE Usuario SET nome = ? SET email = ? WHERE id = ?";
+        String sql = "UPDATE Usuario SET nome = ?, email = ?, telefone = ? WHERE id = ?";
 
         try {
             PreparedStatement preparador = con.prepareStatement(sql);
@@ -50,7 +51,7 @@ public class UsuarioDao {
             preparador.setInt(4, usuario.getId());
             preparador.execute();
             preparador.close();
-            System.out.println("Atualização realizada!");
+            System.out.println("Atualizacao realizada!");
         }catch(SQLException e) {
             System.out.println("ERRO - "+e.getMessage());
         }
@@ -84,7 +85,7 @@ public class UsuarioDao {
                 usuario.setId(resultados.getInt("id"));
                 usuario.setNome(resultados.getString("nome"));
                 usuario.setCpf(resultados.getString("cpf"));
-                //usuario.getdataNascimento(resultados.getDate(1999-01-01));
+                usuario.setDataNascimento(resultados.getDate("dataNascimento"));
                 usuario.setEmail(resultados.getString("email"));
                 usuario.setTelefone(resultados.getString("telefone"));
 

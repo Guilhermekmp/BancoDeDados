@@ -1,6 +1,7 @@
 package dominio;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 public class TestaMetodosUsuarioDao {
@@ -27,10 +28,10 @@ public class TestaMetodosUsuarioDao {
         Usuario usuario1 = new Usuario();
         usuario1.setId(1);
         usuario1.setNome("Jhon");
-        usuario1.setCpf("222.879.210-10");
-        //usuario1.setIdataNascimento("1999-01-01");
+        usuario1.setCpf("22287921010");
+        usuario1.setDataNascimento(new Date());
         usuario1.setEmail("jhon@gmail.com");
-        usuario1.setTelefone("(83) 927823-8830");
+        usuario1.setTelefone("839278238830");
 
         UsuarioDao usuarioDao = null;
 
@@ -50,7 +51,7 @@ public class TestaMetodosUsuarioDao {
         usuarioUpdate.setId(1);
         usuarioUpdate.setNome("Jhon Diniz");
         usuarioUpdate.setEmail("jhon.diniz@gmail.com");
-        usuarioUpdate.setTelefone("(70) 88482-9979");
+        usuarioUpdate.setTelefone("70884829979");
 
         UsuarioDao usuariodao = null;
 
