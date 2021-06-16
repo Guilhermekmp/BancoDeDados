@@ -16,10 +16,17 @@ public class Main {
       e.printStackTrace();
     }
     
+
     TestaMetodosUsuarioDao.testaInsert();
     TestaMetodosUsuarioDao.testaUpdate();
     TestaMetodosUsuarioDao.testaDelete();
     TestaMetodosUsuarioDao.testaSelectTodos();
+
+    TestaMetodosArmaDao.testaInsert();
+   	TestaMetodosArmaDao.testaUpdate();
+   	TestaMetodosArmaDao.testaDelete();
+    TestaMetodosArmaDao.testaSelectTodos();
+
     
   }
 }
