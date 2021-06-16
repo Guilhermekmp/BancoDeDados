@@ -1,4 +1,5 @@
 import connection.ConexaoBanco;
+import dominio.TestaMetodosUsuarioDao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,5 +15,7 @@ public class Main {
     }catch (SQLException e){
       e.printStackTrace();
     }
+
+    TestaMetodosUsuarioDao.testaSelectTodos();
   }
 }
