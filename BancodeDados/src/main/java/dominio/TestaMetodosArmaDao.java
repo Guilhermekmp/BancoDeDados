@@ -29,7 +29,7 @@ public class TestaMetodosArmaDao {
 		arma1.setNome("Awm G22");
 		arma1.setMarca("Accuracy International");
 		arma1.setModelo("Sniper");
-		arma1.setValor(55000);
+		arma1.setValor(550);
 		arma1.setEstoque(3);
 		
 		ArmaDao armadao = null;
@@ -48,7 +48,7 @@ public class TestaMetodosArmaDao {
 	public static void testaUpdate() {
 		Arma armaUpdate = new Arma();
 		armaUpdate.setNumeroDeSerie(1);
-		armaUpdate.setValor(52000);
+		armaUpdate.setValor(520);
 		
 		ArmaDao armadao = null;
 		

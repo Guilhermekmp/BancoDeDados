@@ -36,6 +36,8 @@ public class Main {
     TestaVenda.testaUpdate();
     TestaVenda.testaSelectTodos();
     TestaVenda.testaDelete();
-
+    
+    TestaMetodosUsuarioDao.testaDelete();
+    TestaMetodosArmaDao.testaDelete();
   }
 }
