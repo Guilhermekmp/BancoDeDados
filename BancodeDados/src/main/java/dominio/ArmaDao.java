@@ -1,3 +1,4 @@
+package dominio;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +18,7 @@ public class ArmaDao {
 	}
 	
 	public void adicionarArma(Arma arma) {
-		String sql = "INSERT INTO Arma (numerodeserie, nome, marca, modelo, valor) VALUES (?,?,?,?,?)";
+		String sql = "INSERT INTO Arma (numerodeserie, nome, marca, modelo, valor, estoque) VALUES (?,?,?,?,?,?)";
 		
 		try {
 			PreparedStatement preparador = con.prepareStatement(sql);
@@ -26,6 +27,7 @@ public class ArmaDao {
 			preparador.setString(3, arma.getMarca());
 			preparador.setString(4, arma.getModelo());
 			preparador.setFloat(5, arma.getValor());
+			preparador.setInt(6, arma.getEstoque());
 			preparador.execute();
 			preparador.close();
 			System.out.println("Inserção realizada!");
@@ -79,6 +81,7 @@ public class ArmaDao {
 				armaTemp.setMarca(resultados.getString("marca"));
 				armaTemp.setModelo(resultados.getString("modelo"));
 				armaTemp.setValor(resultados.getFloat("valor"));
+				armaTemp.setEstoque(resultados.getInt("estoque"));
 				
 				lista.add(armaTemp);
 			}

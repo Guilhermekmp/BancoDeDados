@@ -1,3 +1,4 @@
+package dominio;
 import java.sql.SQLException;
 
 import java.util.List;
@@ -29,6 +30,7 @@ public class TestaMetodosArmaDao {
 		arma1.setMarca("Accuracy International");
 		arma1.setModelo("Sniper");
 		arma1.setValor(55000);
+		arma1.setEstoque(3);
 		
 		ArmaDao armadao = null;
 		
@@ -81,7 +83,8 @@ public class TestaMetodosArmaDao {
 					" Nome: "+ arma.getNome()+
 					" Marca: "+ arma.getMarca()+
 					" Modelo: "+ arma.getModelo()+
-					" Valor: "+ arma.getValor());
+					" Valor: "+ arma.getValor()+
+					" Estoque: "+arma.getEstoque());
 		}
 	}
 }

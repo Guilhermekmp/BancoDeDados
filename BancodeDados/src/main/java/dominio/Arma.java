@@ -1,3 +1,4 @@
+package dominio;
 
 public class Arma {
 	
@@ -6,7 +7,14 @@ public class Arma {
 	private String marca;
 	private String modelo;
 	private float valor;
+	private int estoque;
 	
+	public int getEstoque() {
+		return estoque;
+	}
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
+	}
 	public int getNumeroDeSerie() {
 		return numeroDeSerie;
 	}
